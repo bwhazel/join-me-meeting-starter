@@ -16,7 +16,7 @@ module.exports = function(environment) {
     APP: {
       hello: {
         services: {
-          joinme: 'jfgc3r48w6tr4687639jq34x'
+          joinme: '9wp7j5m6jpwzdbnvjcptrwnk'
         },
       }
     }
