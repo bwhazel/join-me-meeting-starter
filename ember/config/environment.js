@@ -14,8 +14,11 @@ module.exports = function(environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      hello: {
+        services: {
+          joinme: 'jfgc3r48w6tr4687639jq34x'
+        },
+      }
     }
   };
 
