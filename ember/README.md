@@ -24,11 +24,20 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * in `ember/config/environment.js` replace the 'ENTER-API-KEY-HERE' string with your given api key.
-* run `ember server` on the command line inside the `ember/` directory
+* run `ember server` on the command line inside the `ember/` directory.
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-## Building
+## Building & Deploying
 
+* in `ember/config/environment.js` make sure your join.me API key is included in the 'hello' object.
+
+```javascript
+hello: {
+  services: {
+    joinme: 'ENTER-API-KEY-HERE'
+  },
+}
+```
 * `ember build --production` (production)
 * Change the logos in the manifest.json file to the local join.me .png files inside the `dist/` folder.
 * Navigate to the `chrome://extensions/` url inside the chrome browser window
