@@ -8,9 +8,9 @@ export default Ember.Controller.extend({
     login: function() {
       const _this = this;
 
-      hello.login('joinme', {'scope' : 'start_meeting'}).then(function(response) {
-        return this.set('signedIn', true);
-      }, function(e) {
+      hello.login('joinme', {'scope' : 'start_meeting'}).then(function() {
+        return _this.set('signedIn', true);
+      }, function() {
         _this.set('error', 'Theres been an issue signing into joinme');
       });
     },
@@ -25,9 +25,9 @@ export default Ember.Controller.extend({
         },
         url: "https://api.join.me/v1/meetings/start",
         type: "POST",
-        data: { "startWithPersonalUrl": true }
+        data: { "startWithPersonalUrl" : true }
       }).then(function(response) {
-          // At this point, open new window with join me response url
+          // At this point, open new window with join me response url - API not recieving the response correctly
           return response;
       });
     },
@@ -35,11 +35,12 @@ export default Ember.Controller.extend({
     logout: function(){
       const _this = this;
 
-      hello.logout('joinme').then(function(response) {
-        return this.set('signedIn', false);
-      }, function(e) {
+      hello.logout('joinme').then(function() {
+        return _this.set('signedIn', false);
+      }, function() {
         _this.set('error', 'Theres been an issue logging out of joinme');
       });
     }
   }
+
 });
