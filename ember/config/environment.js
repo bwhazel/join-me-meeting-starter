@@ -16,7 +16,7 @@ module.exports = function(environment) {
     APP: {
       hello: {
         services: {
-          joinme: 'xzpqx9r9yt9bm36qnzjgcdsx'
+          joinme: 'ENTER-API-KEY-HERE'
         },
       },
 

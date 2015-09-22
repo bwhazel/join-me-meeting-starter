@@ -8,10 +8,21 @@ export default Ember.Controller.extend({
     login: function() {
       const _this = this;
 
+      // Use hello.js Join.me adaptor to authenticate
       hello.login('joinme', {'scope' : 'start_meeting'}).then(function() {
         return _this.set('signedIn', true);
       }, function() {
         _this.set('error', 'Theres been an issue signing into joinme');
+      });
+    },
+
+    logout: function(){
+      const _this = this;
+
+      hello.logout('joinme').then(function() {
+        return _this.set('signedIn', false);
+      }, function() {
+        _this.set('error', 'Theres been an issue logging out of joinme');
       });
     },
 
@@ -31,16 +42,6 @@ export default Ember.Controller.extend({
           return response;
       });
     },
-
-    logout: function(){
-      const _this = this;
-
-      hello.logout('joinme').then(function() {
-        return _this.set('signedIn', false);
-      }, function() {
-        _this.set('error', 'Theres been an issue logging out of joinme');
-      });
-    }
   }
 
 });
