@@ -1,7 +1,6 @@
-# Joinme
+# Joinme Meeting Starter
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A simple chrome extension to start an 'ad-hoc' meeting with join.me
 
 ## Prerequisites
 
@@ -16,7 +15,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* change into the new directory
+* `cd` into the `ember/` directory
 * `npm install`
 * `bower install`
 
@@ -25,23 +24,12 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## Building
 
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
+* `ember build --production` (production)
+* Change the logos in the manifest.json file to the local join.me .png files inside the `dist/` folder.
+* Navigate to the `chrome://extensions/` url inside the chrome browser window
+* click the `load unpacked extension` button and navigate to the `dist/` directory of the ember application, load the application rom this directory.
 
 ## Further Reading / Useful Links
 
@@ -49,5 +37,3 @@ Specify what it takes to deploy your app.
 * [ember-cli](http://www.ember-cli.com/)
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
