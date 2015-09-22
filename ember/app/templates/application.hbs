@@ -1,3 +1,18 @@
 <h2 id="title">Join Me Meeting Starter</h2>
 
+  {{#if signedIn}}
+  <form {{action 'startMeeting' on='submit'}}>
+    <button type='submit'>Start Meeting</button>
+  </form>
+
+  <form {{action 'logout' on='submit'}}>
+    <button type='submit'>Logout</button>
+  </form>
+
+  {{else}}
+    <form {{action 'login' on='submit'}}>
+      <button type='submit'>Login</button>
+    </form>
+  {{/if}}
+
 {{outlet}}

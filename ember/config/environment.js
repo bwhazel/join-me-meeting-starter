@@ -16,9 +16,13 @@ module.exports = function(environment) {
     APP: {
       hello: {
         services: {
-          joinme: '9wp7j5m6jpwzdbnvjcptrwnk'
+          joinme: 'wxj8x64m3hp2j37q9jfqzfjs'
         },
-      }
+      },
+
+      contentSecurityPolicy: {
+        "connect-src" : "'self'",
+      },
     }
   };
 
