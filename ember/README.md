@@ -11,7 +11,7 @@ You will need the following things properly installed on your computer.
 * [Bower](http://bower.io/)
 * [Ember CLI](http://www.ember-cli.com/)
 * [PhantomJS](http://phantomjs.org/)
-* A working Join.me api key for v1 of the basic api(ability to start meetings)
+* A working Join.me api key for v1 of the basic api (ability to start meetings)
 * Redirect URI set to the url of the extension. (If testing with a local browser window it should be set to http://localhost:4200)
 
 ## Installation
@@ -24,7 +24,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * in `ember/config/environment.js` replace the 'ENTER-API-KEY-HERE' string with your given api key.
-* run `ember server` in the command line
+* run `ember server` on the command line inside the `ember/` directory
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ## Building
